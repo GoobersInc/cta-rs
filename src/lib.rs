@@ -22,7 +22,7 @@ impl FurColor {
 }
 
 trait Cta {
-    fn fur_color() -> FurColor; // let the end-user deal with it
+    fn fur_color() -> FurColor; // no longer!
     fn likes_petting() -> bool;
 }
 
