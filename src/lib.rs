@@ -1,5 +1,28 @@
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum FurColor {
+    Brown,
+    Black,
+    White,
+    Gray,
+    Ginger,
+    Cream,
+    Blue,
+    Silver,
+    Golden,
+    Tabby,
+    Calico,
+    Tortoiseshell,
+    Other(String),
+}
+
+impl FurColor {
+    fn combine(self, other: FurColor) -> FurColor {
+        FurColor::Other(format!("{:?}-{:?}", self, other))
+    }
+}
+
 trait Cta {
-    fn fur_color() -> String; // let the end-user deal with it
+    fn fur_color() -> FurColor; // let the end-user deal with it
     fn likes_petting() -> bool;
 }
 
